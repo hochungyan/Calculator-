@@ -13,8 +13,19 @@ namespace ConsoleApp8
             //Total Number of walls
             Console.WriteLine("Input the Number of Walls (MAX WALL IS 3)");
             int nOW = Int32.Parse(Console.ReadLine());
+            int[] Walls = new int[nOW];
 
 
+            for (int A = 0; A < nOW; A++)
+            {
+                Console.WriteLine("Input Your Length in meters For Wall " + (A+1));
+                int L =int.Parse(Console.ReadLine());
+                Console.WriteLine("Input Your Width in meters For Wall " + (A+1));
+                int W=int.Parse(Console.ReadLine());
+                Walls[A] = L*W;
+                
+            }
+            
             if (nOW == 3)
             {
 
@@ -41,7 +52,6 @@ namespace ConsoleApp8
 
 
 
-                int[] Walls = new int[nOW];
                 Walls[0] = Area;
                 Walls[1] = Area2;
                 Walls[2] = Area3;
