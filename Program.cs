@@ -25,9 +25,17 @@ namespace ConsoleApp8
                     int W = int.Parse(Console.ReadLine());
                     Walls[A] = L * W;
                     Console.WriteLine("Area for Wall " + (A + 1) + ": " + Walls[A]);
+                    Console.WriteLine("Colour You Can choose From");
                     
-                    
-                    
+                    string[] C = { "Black", "Red", "Green", "Blue" };
+                    foreach (string c2 in C)
+                    {
+                        
+                        Console.WriteLine(c2.ToUpper() );
+                            };
+                 
+
+
                     string colour;
                     double cOP;
                     Console.WriteLine("Select A colour");
@@ -35,8 +43,8 @@ namespace ConsoleApp8
                     switch (colour.ToLower())
                     {
                         case "black":
-                            cOP = 4;
-                            Console.WriteLine("Black Colour Can Will Cost £4 each");
+                            cOP = 3.9;
+                            Console.WriteLine("Black Colour Can Will Cost £3.9 each");
 
                             break;
                         case "red":
@@ -47,14 +55,14 @@ namespace ConsoleApp8
 
 
                         case "green":
-                            cOP = 6;
-                            Console.WriteLine("Green Colour Can Will Cost £6 each");
+                            cOP = 4.8;
+                            Console.WriteLine("Green Colour Can Will Cost £4.8 each");
 
                             break;
 
                         case "blue":
                             cOP = 3.5;
-                            Console.WriteLine("Blue Colour Can Will Cost £3 each");
+                            Console.WriteLine("Blue Colour Can Will Cost £3.5 each");
 
                             break;
 
