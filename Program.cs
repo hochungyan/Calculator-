@@ -19,6 +19,7 @@ namespace ConsoleApp8
 
                 int lit2 = 0;
                 float R = 0;
+                float lit1=0;
                 for (int A = 0; A < nOW; A++)
                 {
                     Console.WriteLine("Input Your Length in meters For Wall " + (A + 1));
@@ -48,7 +49,7 @@ namespace ConsoleApp8
                             cOP = 24;
                             Console.WriteLine("2.5L Can Will Cost £24 each and 5L Can will Cost 48 each");
                             Console.WriteLine("which Lit can do you want");
-                            float lit1= float.Parse(Console.ReadLine());
+                             lit1= float.Parse(Console.ReadLine());
 
                             if (lit1 == 2.5)
                             { 
@@ -68,21 +69,60 @@ namespace ConsoleApp8
 
                         case "red":
                             cOP = 25;
-                            Console.WriteLine("Red Colour Can Will Cost £25 each");
+                            Console.WriteLine("2.5L Can will Cost you £25 and 5L will cost you 49 each");
+                            Console.WriteLine("which Lit can do you want");
+                            lit1 = float.Parse(Console.ReadLine());
+                            if (lit1 ==2.5)
+                            { lit2 = 25;
+                                R = (Walls[A] / 35);
+                            }
+                            else if (lit1 == 5)
+                            {
+                                lit2 = 49;
+                                R = (Walls[A] / 70);
+                            }
+                            else
+                            { Console.WriteLine("Invalid"); }
 
                             break;
 
 
                         case "green":
                             cOP = 26;
-                            Console.WriteLine("Green Colour Can Will Cost £26 each");
-
+                            Console.WriteLine("2.5L Green Colour Can Will Cost £26 each and 5L will cost you 52 each");
+                            Console.WriteLine("which Lit can do you want");
+                            lit1 = float.Parse(Console.ReadLine());
+                            if (lit1 == 2.5)
+                            {
+                                lit2 = 26;
+                                R = (Walls[A] / 35);
+                            }
+                            else if (lit1 == 5)
+                            {
+                                lit2 = 52;
+                                R = (Walls[A] / 70);
+                            }
+                            else
+                            { Console.WriteLine("Invalid"); }
                             break;
 
                         case "blue":
                             cOP = 28;
-                            Console.WriteLine("Blue Colour Can Will Cost £28 each");
-
+                            Console.WriteLine("2.5L Blue Colour Can Will Cost £28 each and 5L will cost you 55 each");
+                            Console.WriteLine("which Lit can do you want");
+                            lit1 = float.Parse(Console.ReadLine());
+                            if (lit1 == 2.5)
+                            {
+                                lit2 = 28;
+                                R = (Walls[A] / 35);
+                            }
+                            else if (lit1 == 5)
+                            {
+                                lit2 = 55;
+                                R = (Walls[A] / 70);
+                            }
+                            else
+                            { Console.WriteLine("Invalid"); }
                             break;
 
 
@@ -100,8 +140,8 @@ namespace ConsoleApp8
                     double cost = R2 * cOP;
                     double cost2 = R2 * lit2;
                     Console.WriteLine("The coverage for 2.5 Lit Can is 35m^2");
-                    Console.WriteLine("Required Paint For Wall " + (A + 1) + ": " + R +" Units of 2.5 Litre Can");
-                    Console.WriteLine("Total Required Paint For Wall "  +(A +1) + ": "+ Math.Round(R) + " Units of 2.5 Litre Can");
+                    Console.WriteLine("Required Paint For Wall " + (A + 1) + ": " + R +" Units of "+ lit1 + " Litre Can");
+                    Console.WriteLine("Total Required Paint For Wall "  +(A +1) + ": "+ Math.Round(R) + " Units of "+ lit1 + " Litre Can");
                     Console.WriteLine("Cost : " + "£" + cost);
                     Console.WriteLine("Cost : " + "£" + cost2);
 
