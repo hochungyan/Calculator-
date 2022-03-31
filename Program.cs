@@ -14,7 +14,7 @@ namespace ConsoleApp8
                 //Total Number of walls
                 Console.WriteLine("Input the Number of Walls ");
                 int nOW = Int32.Parse(Console.ReadLine());
-                int[] Walls = new int[nOW];
+                float[] Walls = new float[nOW];
 
 
                 for (int A = 0; A < nOW; A++)
@@ -25,8 +25,11 @@ namespace ConsoleApp8
                     int W = int.Parse(Console.ReadLine());
                     Walls[A] = L * W;
                     Console.WriteLine("Area for Wall " + (A + 1) + ": " + Walls[A]);
+                    
+                    
+                    
                     string colour;
-                    float cOP;
+                    double cOP;
                     Console.WriteLine("Select A colour");
                     colour = Console.ReadLine();
                     switch (colour.ToLower())
@@ -42,9 +45,24 @@ namespace ConsoleApp8
 
                             break;
 
+
+                        case "green":
+                            cOP = 6;
+                            Console.WriteLine("Green Colour Can Will Cost £6 each");
+
+                            break;
+
+                        case "blue":
+                            cOP = 3.5;
+                            Console.WriteLine("Blue Colour Can Will Cost £3 each");
+
+                            break;
+
+
+
                         default:
-                            cOP = 1;
-                            Console.WriteLine("In");
+                            cOP = 0;
+                            Console.WriteLine("Invalid");
                             break;
 
 
@@ -54,10 +72,12 @@ namespace ConsoleApp8
 
                     }
 
-                    float R = (Walls[A] / cOP);
-                    Console.WriteLine("Required Paint " + (A + 1) + ": " + R);
-
-
+                    float R = (Walls[A]/ 6);
+                    double R2 = Math.Round(R);
+                    double cost = R2 * cOP;
+                    Console.WriteLine("Required Paint " + (A + 1) + ": " + R +" One Litre Cans");
+                    Console.WriteLine("Total Required Paint For Wall "  +(A +1) + ": "+ Math.Round(R) + " [One Litre Cans]");
+                    Console.WriteLine("Cost : " + "£" + cost);
 
                 }
 
