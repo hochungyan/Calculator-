@@ -43,26 +43,27 @@ namespace ConsoleApp8
                     switch (colour.ToLower())
                     {
                         case "black":
-                            cOP = 3.9;
-                            Console.WriteLine("Black Colour Can Will Cost £3.9 each");
+                            cOP = 24;
+                            Console.WriteLine("Black Colour Can Will Cost £24 each");
 
                             break;
+
                         case "red":
-                            cOP = 5;
-                            Console.WriteLine("Red Colour Can Will Cost £5 each");
+                            cOP = 25;
+                            Console.WriteLine("Red Colour Can Will Cost £25 each");
 
                             break;
 
 
                         case "green":
-                            cOP = 4.8;
-                            Console.WriteLine("Green Colour Can Will Cost £4.8 each");
+                            cOP = 26;
+                            Console.WriteLine("Green Colour Can Will Cost £26 each");
 
                             break;
 
                         case "blue":
-                            cOP = 3.5;
-                            Console.WriteLine("Blue Colour Can Will Cost £3.5 each");
+                            cOP = 28;
+                            Console.WriteLine("Blue Colour Can Will Cost £28 each");
 
                             break;
 
@@ -73,18 +74,14 @@ namespace ConsoleApp8
                             Console.WriteLine("Invalid");
                             break;
 
-
-
-
-
-
                     }
 
-                    float R = (Walls[A]/ 6);
+                    float R = (Walls[A]/ 35);
                     double R2 = Math.Round(R);
                     double cost = R2 * cOP;
-                    Console.WriteLine("Required Paint " + (A + 1) + ": " + R +" One Litre Cans");
-                    Console.WriteLine("Total Required Paint For Wall "  +(A +1) + ": "+ Math.Round(R) + " [One Litre Cans]");
+                    Console.WriteLine("The coverage for 2.5 Lit Can is 35m^2");
+                    Console.WriteLine("Required Paint For Wall " + (A + 1) + ": " + R +" Units of 2.5 Litre Can");
+                    Console.WriteLine("Total Required Paint For Wall "  +(A +1) + ": "+ Math.Round(R) + " Units of 2.5 Litre Can");
                     Console.WriteLine("Cost : " + "£" + cost);
 
                 }
