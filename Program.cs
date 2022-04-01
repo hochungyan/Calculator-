@@ -15,11 +15,11 @@ namespace ConsoleApp8
                 Console.WriteLine("Input the Number of Walls ");
                 int nOW = Int32.Parse(Console.ReadLine());
                 float[] Walls = new float[nOW];
-
+                //abcde
 
                 int lit2 = 0;
                 float R = 0;
-                float lit1=0;
+                float lit1 = 0;
                 for (int A = 0; A < nOW; A++)
                 {
                     Console.WriteLine("Input Your Length in meters For Wall " + (A + 1));
@@ -73,7 +73,8 @@ namespace ConsoleApp8
                             Console.WriteLine("which Lit can do you want");
                             lit1 = float.Parse(Console.ReadLine());
                             if (lit1 == 2.5)
-                            { lit2 = 25;
+                            {
+                                lit2 = 25;
                                 R = (Walls[A] / 35);
                             }
                             else if (lit1 == 5)
@@ -162,23 +163,23 @@ namespace ConsoleApp8
                             Console.WriteLine("Please call 0112345678");
                             break;
                         }
-                      else
+                        else
                         {
                             Console.WriteLine("Thank you for using our service!");
                         }
 
                     }
                 }
-                   
-                    
-                        
-                    
-                }
-                
 
 
-                Console.ReadKey();
+
+
             }
-        }
 
+
+
+            Console.ReadKey();
+        }
     }
+
+}
