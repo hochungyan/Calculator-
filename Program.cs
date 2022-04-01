@@ -29,14 +29,14 @@ namespace ConsoleApp8
                     Walls[A] = L * W;
                     Console.WriteLine("Area for Wall " + (A + 1) + ": " + Walls[A]);
                     Console.WriteLine("Colour You Can choose From");
-                    
+
                     string[] C = { "Black", "Red", "Green", "Blue" };
                     foreach (string c2 in C)
                     {
-                        
-                        Console.WriteLine(c2.ToUpper() );
-                            };
-                 
+
+                        Console.WriteLine(c2.ToUpper());
+                    };
+
 
 
                     string colour;
@@ -49,22 +49,22 @@ namespace ConsoleApp8
                             cOP = 24;
                             Console.WriteLine("2.5L Can Will Cost £24 each and 5L Can will Cost 48 each");
                             Console.WriteLine("which Lit can do you want");
-                             lit1= float.Parse(Console.ReadLine());
+                            lit1 = float.Parse(Console.ReadLine());
 
                             if (lit1 == 2.5)
-                            { 
-                                 lit2 = 24;
+                            {
+                                lit2 = 24;
                                 R = (Walls[A] / 35);
                             }
 
                             else if (lit1 == 5)
-                            { 
+                            {
                                 lit2 = 48;
                                 R = (Walls[A] / 70);
                             }
                             else
                             { Console.WriteLine("Invalid"); }
-                        
+
                             break;
 
                         case "red":
@@ -72,7 +72,7 @@ namespace ConsoleApp8
                             Console.WriteLine("2.5L Can will Cost you £25 and 5L will cost you 49 each");
                             Console.WriteLine("which Lit can do you want");
                             lit1 = float.Parse(Console.ReadLine());
-                            if (lit1 ==2.5)
+                            if (lit1 == 2.5)
                             { lit2 = 25;
                                 R = (Walls[A] / 35);
                             }
@@ -135,18 +135,46 @@ namespace ConsoleApp8
                     }
                     //2.5L covers 35m^2, 5L covers 70m^2
 
-                
+
                     double R2 = Math.Round(R);
                     double cost = R2 * cOP;
                     double cost2 = R2 * lit2;
-                    Console.WriteLine("The coverage for 2.5 Lit Can is 35m^2");
-                    Console.WriteLine("Required Paint For Wall " + (A + 1) + ": " + R +" Units of "+ lit1 + " Litre Can");
-                    Console.WriteLine("Total Required Paint For Wall "  +(A +1) + ": "+ Math.Round(R) + " Units of "+ lit1 + " Litre Can");
-                    Console.WriteLine("Cost : " + "£" + cost);
+                    Console.WriteLine("The coverage for 2.5 and 5 Lit Can is 35m^2 and 70m^2");
+                    Console.WriteLine("Required Paint For Wall " + (A + 1) + ": " + R + " Units of " + lit1 + " Litre Can");
+                    Console.WriteLine("Total Required Paint For Wall " + (A + 1) + ": " + Math.Round(R) + " Units of " + lit1 + " Litre Can");
                     Console.WriteLine("Cost : " + "£" + cost2);
 
-                }
 
+                    Console.WriteLine("Thanks for using our service, would you like to provide us feedback?");
+                    string yes;
+                    string yes2;
+                    yes = Console.ReadLine();
+                    yes.ToLower();
+                    while (yes == "yes")
+                    {
+                        Console.WriteLine("Please Email your feedback to feedback@paintnation.co.uk");
+                        Console.WriteLine("Do you need further assistance");
+                        yes2 = Console.ReadLine();
+                        yes = yes2.ToLower();
+
+                        if (yes == "yes")
+                        {
+                            Console.WriteLine("Please call 0112345678");
+                            break;
+                        }
+                      else
+                        {
+                            Console.WriteLine("Thank you for using our service!");
+                        }
+
+                    }
+                }
+                   
+                    
+                        
+                    
+                }
+                
 
 
                 Console.ReadKey();
@@ -154,4 +182,3 @@ namespace ConsoleApp8
         }
 
     }
-}
